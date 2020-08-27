@@ -99,6 +99,16 @@ react-native run-ios
 react-native run-android
 ```
 
+## Testing
+
+Shoutem UI has `jest` tests set up. In order to run them, you have to temporarily add the following packages under `dependencies`:
+- `"react-native": "0.63.2"`
+- `"react": "16.13.1"`
+Or whichever version your PR requires, then run:
+```bash
+npm i && npm run test
+```
+
 ## UI Toolkit
 
 Shoutem UI is a part of the [Shoutem UI Toolkit](https://shoutem.github.io/ui/) that enables you to build professional looking React Native apps with ease.
