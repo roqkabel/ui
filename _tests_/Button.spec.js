@@ -20,21 +20,16 @@ describe('Button', () => {
     const testIconName = 'Facebook';
     const demo = mount(
       <Button>
-        <Icon name={testIconName} />
         <Text>{testText}</Text>
       </Button>
     );
     const instance = demo.instance();
     const textChildInstance = demo.find(Text).instance();
     const childText = textChildInstance.props.children;
-    const childIconInstance = demo.find(Icon).instance();
-    const childIconName = childIconInstance.props.name;
 
     expect(instance).toBeInstanceOf(Button);
     expect(textChildInstance).toBeInstanceOf(Text);
     expect(childText).toEqual(testText);
-    expect(childIconInstance).toBeInstanceOf(Icon);
-    expect(childIconName).toEqual(testIconName);
 
     demo.unmount()
   });
