@@ -109,6 +109,8 @@ Or whichever version your PR requires, then run:
 npm i && npm run test
 ```
 
+You can run `npm run test --silent` to remove generic NPM error when tests fail.
+
 ## UI Toolkit
 
 Shoutem UI is a part of the [Shoutem UI Toolkit](https://shoutem.github.io/ui/) that enables you to build professional looking React Native apps with ease.

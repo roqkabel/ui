@@ -15,6 +15,23 @@ function copyProps(src, target) {
   });
 }
 
+// removing react-native caused warnings while we wait for react-native enzyme adapter
+// https://github.com/enzymejs/enzyme/issues/831#issuecomment-490644160
+const originalConsoleError = console.error;
+console.error = (message) => {
+  if (
+    message.includes('Unknown event handler property')
+    || message.includes('is using incorrect casing')
+    || message.includes('React does not recognize')
+    || message.includes('for a non-boolean attribute')
+    || message.includes('is unrecognized in this browser')
+  ) {
+    return;
+  }
+
+  originalConsoleError(message);
+};
+
 global.window = window;
 global.document = window.document;
 global.navigator = {

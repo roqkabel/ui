@@ -17,7 +17,6 @@ describe('Button', () => {
 
   it('renders nested children', () => {
     const testText = 'Press me';
-    const testIconName = 'Facebook';
     const demo = mount(
       <Button>
         <Text>{testText}</Text>
