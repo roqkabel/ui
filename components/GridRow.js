@@ -1,6 +1,6 @@
-import PropTypes from 'prop-types';
 import React, { PureComponent, Children } from 'react';
 import { View as RNView, ViewPropTypes } from 'react-native';
+import PropTypes from 'prop-types';
 import _ from 'lodash';
 
 import { connectAnimation } from '@shoutem/animation';

@@ -43,13 +43,18 @@ describe('NavigationBar', () => {
 
     expect(instance).toBeInstanceOf(NavigationBar);
     expect(instanceTitleProp).toEqual(titleTestText);
-    expect(titleComponentInstance).toBeInstanceOf(Title);
-    expect(titleComponentString).toEqual(titleTestText);
-    expect(buttonComponentInstance).toBeInstanceOf(Button);
+
     expect(subtitleComponentInstance).toBeInstanceOf(Subtitle);
     expect(subtitleString).toEqual(subtitleTestText);
+
+    expect(titleComponentInstance).toBeInstanceOf(Title);
+    expect(titleComponentString).toEqual(titleTestText);
+
+    expect(buttonComponentInstance).toBeInstanceOf(Button);
+
     expect(textComponentInstance).toBeInstanceOf(Text);
     expect(textString).toEqual(buttonTestText);
+
 
     demo.unmount()
   });

@@ -5,8 +5,8 @@ import {
   Image,
   TouchableOpacity,
 } from 'react-native';
-import autoBind from 'auto-bind/react';
 import PropTypes from 'prop-types';
+import autoBind from 'auto-bind/react';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import { makeZoomable } from '@shoutem/animation';

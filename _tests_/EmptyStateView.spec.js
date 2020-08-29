@@ -11,12 +11,13 @@ describe('EmptyStateView', () => {
     const instance = demo.instance();
 
     expect(instance).toBeInstanceOf(EmptyStateView);
+
+    demo.unmount();
   });
 
   it('renders a Button when onRetry prop is provided with text from retryButtonTitle prop', () => {
     const onRetry = () => {};
     const retryButtonTextTest = 'Retry';
-
     const demo = mount(
       <EmptyStateView
         onRetry={onRetry}
@@ -29,9 +30,13 @@ describe('EmptyStateView', () => {
     const buttonTextString = textInstance.props.children;
 
     expect(instance).toBeInstanceOf(EmptyStateView);
+
     expect(buttonInstance).toBeInstanceOf(Button);
+
     expect(textInstance).toBeInstanceOf(Text);
     expect(buttonTextString).toEqual(retryButtonTextTest);
+
+    demo.unmount();
   });
 
   it('renders a Subtitle when message prop is provided', () => {
@@ -42,7 +47,10 @@ describe('EmptyStateView', () => {
     const subtitleString = subtitleInstance.props.children;
 
     expect(instance).toBeInstanceOf(EmptyStateView);
+
     expect(subtitleInstance).toBeInstanceOf(Subtitle);
     expect(subtitleString).toEqual(messageTest);
+
+    demo.unmount();
   });
 });

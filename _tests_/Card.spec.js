@@ -33,6 +33,7 @@ describe('Card', () => {
     const childText = childInstance.props.children;
 
     expect(instance).toBeInstanceOf(Card);
+
     expect(childInstance).toBeInstanceOf(Title);
     expect(childText).toEqual(testText);
 

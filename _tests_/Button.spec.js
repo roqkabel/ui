@@ -27,6 +27,7 @@ describe('Button', () => {
     const childText = textChildInstance.props.children;
 
     expect(instance).toBeInstanceOf(Button);
+
     expect(textChildInstance).toBeInstanceOf(Text);
     expect(childText).toEqual(testText);
 

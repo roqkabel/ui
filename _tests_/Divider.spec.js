@@ -10,6 +10,8 @@ describe('Divider', () => {
     const instance = demo.instance();
 
     expect(instance).toBeInstanceOf(Divider);
+
+    demo.unmount();
   });
 
   it('renders nested children', () => {
@@ -27,7 +29,10 @@ describe('Divider', () => {
 
     expect(instance).toBeInstanceOf(Divider);
     expect(instanceStyleName).toEqual(testStyleName);
+
     expect(childInstance).toBeInstanceOf(Caption);
     expect(childInstanceString).toEqual(testCaption);
+
+    demo.unmount();
   });
 });

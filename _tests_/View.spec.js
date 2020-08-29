@@ -32,6 +32,7 @@ describe('View', () => {
     const childText = childInstance.props.children;
 
     expect(instance).toBeInstanceOf(View);
+
     expect(childInstance).toBeInstanceOf(Title);
     expect(childText).toEqual(testText);
 
